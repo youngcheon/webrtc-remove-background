@@ -54,7 +54,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:tflite": "yarn build:tflite:image && docker run --rm -it -v $PWD:/workspace -w /workspace tflite",
-    "build:tflite:image": "docker build -t tflite tflite",
+    "build:tflite:image": "docker build --platform linux/amd64 -t tflite tflite",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

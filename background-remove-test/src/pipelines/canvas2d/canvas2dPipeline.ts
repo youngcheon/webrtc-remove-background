@@ -19,9 +19,8 @@ export function buildCanvas2dPipeline(
 ) {
   const ctx = canvas.getContext('2d')!
 
-  const [segmentationWidth, segmentationHeight] = inputResolutions[
-    segmentationConfig.inputResolution
-  ]
+  const [segmentationWidth, segmentationHeight] =
+    inputResolutions[segmentationConfig.inputResolution]
   const segmentationPixelCount = segmentationWidth * segmentationHeight
   const segmentationMask = new ImageData(segmentationWidth, segmentationHeight)
   const segmentationMaskCanvas = document.createElement('canvas')
